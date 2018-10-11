@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
-  state={name:"John Doe"}
-  componentDidMount(){
-    fetch('/name')
-   .then(res=>res.json())
-   .then(data=>this.setState({name:data.name}))
+  state = { name: "John Doe" };
+  componentDidMount() {
+    fetch("/name")
+      .then(res => res.json())
+      .then(data => this.setState({ name: data.name }));
   }
   render() {
     return (
